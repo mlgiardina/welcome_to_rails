@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     render text: string_users.join(" ")
   end
 
+
   def show
     if User.exists?(params[:id])
       user = User.find(params[:id])
