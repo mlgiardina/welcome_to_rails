@@ -18,7 +18,9 @@ class UsersController < ApplicationController
   end
 
   def delete_user
+    user_id = User.find(params[:id])
     User.delete(params[:id])
+    render text: "User #{user_id.id} has been deleted" , status: 200
   end
 
   def limit_and_offset

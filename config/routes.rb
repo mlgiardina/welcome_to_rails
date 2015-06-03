@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   get '/users', to: 'users#index'
 
+  get '/users/:id/delete', to: 'users#delete_user'
+
   get '/users/:id', to: 'users#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
